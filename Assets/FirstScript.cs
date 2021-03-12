@@ -126,7 +126,7 @@ public class FirstScript : MonoBehaviour
         {
             Debug.Log(xList[i]);
         }
-        */
+        
 
         int[] yList = new int[31];
 
@@ -139,7 +139,30 @@ public class FirstScript : MonoBehaviour
         {
             Debug.Log(yList[i]);
         }
-        
+        */
+
+
+        //List
+        //宣言、代入、取得、長さの取得、追加、削除
+        //for文との兼ね合い
+        //foreach
+
+        List<int> numbers = new List<int>();
+        for ( int i=0; i<100; i++)
+        {
+            if (i%3 == 0)
+            {
+                numbers.Add(i);
+            }
+        }
+
+        foreach (int numder in numbers)
+        {
+            Debug.Log(numder);
+        }
+
+
+
     }
 
     void Update()
