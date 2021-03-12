@@ -37,13 +37,13 @@ public class FirstScript : MonoBehaviour
         {
             Debug.Log("あまりが０です");
         }
-        */
+        
 
-        //switch文
+        //switch文 //特定できるものに使う（Playerなど）
 
         string characterType = "Player";
 
-        switch (characterType)
+        switch (characterType) //代入された値を探す
         {
             case "Player":
             case "Friends":
@@ -52,9 +52,45 @@ public class FirstScript : MonoBehaviour
             case "Enemy":
             Debug.Log("敵");
             break;
-            default:
+            default:           //なければdefaultが出力される
             Debug.Log("その他");
             break;
+        }
+        
+
+        // 繰り返し処理
+        // while
+        int x = 0;
+        while (x < 10)
+        {
+            Debug.Log(x);
+            x++;
+        }
+        
+        //for
+        //continue：次の処理を行う
+        //break:処理を抜ける
+        for (int i=0; i<10; i++)
+        {
+            if (i == 7)
+            {
+                break;
+            }
+
+            if(i == 3)
+            {
+                continue;
+            }
+            Debug.Log(i);
+        }
+        */
+        for (int r=0; r<=20; r++)
+        {
+            if (r%2 != 0)
+            {
+                continue;
+            }
+            Debug.Log(r);
         }
     }
 
