@@ -83,7 +83,7 @@ public class FirstScript : MonoBehaviour
             }
             Debug.Log(i);
         }
-        */
+        
         for (int r=0; r<=20; r++)
         {
             if (r%2 != 0)
@@ -92,6 +92,54 @@ public class FirstScript : MonoBehaviour
             }
             Debug.Log(r);
         }
+        
+
+        //配列
+        //宣言、代入、長さ取得
+        //for文との兼ね合い
+
+        
+        int x1 = 0;
+        int x2 = 2;
+        int x3 = 3;
+        
+
+        int[] xList = new int[3]; //宣言パターン１
+        xList[0] = 0; //代入
+        xList[1] = 1;
+        xList[2] = 2;
+        
+
+        int[] xList = new int[3] {0, 2, 3};
+
+        //取得
+        Debug.Log(xList[0]);
+        Debug.Log(xList[1]);
+        Debug.Log(xList[2]);
+        
+
+        //長さの取得（要素の数）
+        Debug.Log(xList.Length);
+
+        //for文との連携
+        for (int i = 0; i < xList.Length; i++)
+        {
+            Debug.Log(xList[i]);
+        }
+        */
+
+        int[] yList = new int[31];
+
+        for (int i=0; i<31; i++)
+        {
+            yList[i] = i;
+        }
+
+        for (int i=0; i<yList.Length; i++)
+        {
+            Debug.Log(yList[i]);
+        }
+        
     }
 
     void Update()
