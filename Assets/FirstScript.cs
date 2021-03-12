@@ -139,7 +139,7 @@ public class FirstScript : MonoBehaviour
         {
             Debug.Log(yList[i]);
         }
-        */
+        
 
 
         //List
@@ -147,6 +147,47 @@ public class FirstScript : MonoBehaviour
         //for文との兼ね合い
         //foreach
 
+        List<int> numbers = new List<int>() { -1, 21, 23 };
+        Debug.Log(numbers[0]);
+        Debug.Log(numbers[1]);
+        Debug.Log(numbers[2]);
+
+        numbers[1] = 0;
+        Debug.Log(numbers[1]);
+
+        // 追加
+        numbers.Add(100);
+        Debug.Log(numbers[3]);
+        Debug.Log(numbers.Count);
+
+        // 削除
+        numbers.RemoveAt(3);
+        Debug.Log(numbers.Count);
+        numbers.Remove(-1);
+        Debug.Log(numbers.Count);
+
+        // for文
+        for (int i = 0; i < numbers.Count; i++)
+        {
+            Debug.Log(numbers[i]);
+        }
+        // 1-9までのListを作りたい
+        List<int> numberList = new List<int>();
+        for (int i = 0; i < 10; i++)
+        {
+            numberList.Add(i);
+        }
+        for (int i = 0; i < numberList.Count; i++)
+        {
+            Debug.Log(numberList[i]);
+        }
+        List<string> nameList = new List<string>() { "太郎", "田中", "鈴木" };
+        foreach (string Name in nameList)
+        {
+            Debug.Log(Name);
+        }
+
+        //練習
         List<int> numbers = new List<int>();
         for ( int i=0; i<100; i++)
         {
@@ -160,10 +201,72 @@ public class FirstScript : MonoBehaviour
         {
             Debug.Log(numder);
         }
+        */
 
+
+        //int numder1 = NumderAddFunction(1, 100);
+        //Debug.Log(numder1);
+
+        List<int> threenumber = ThreeNumber();
+
+        foreach (int number in threenumber)
+        {
+            Debug.Log(number);
+        }
 
 
     }
+    /*
+    int NumderAddFunction(int n, int m)
+    {
+        int sum = 0;
+        for (int i=n; i<m+1; i++)
+        {
+            if (i%2 == 0)
+            {
+                Debug.Log(i);
+                sum += i;
+            }
+        }
+        return sum;
+    }
+    */
+
+    List<int> ThreeNumber()
+    {
+        List<int> threenumber = new List<int>();
+        for (int i=1; i<=100; i++)
+        {
+            if (IsThreeAhoNumber(i))
+            {
+                threenumber.Add(i);
+            }
+        }
+        return threenumber;
+    }
+
+    bool IsThreeAhoNumber(int number)
+    {
+        if (number%3 == 0)
+        {
+            return true;
+        }
+        if (number%10 == 3)
+        {
+            return true;
+        }
+
+        while (number != 0)
+        {
+            if ( number % 10 == 3)
+            {
+                return true;
+            }
+            number = number / 10;
+        }
+        return false;
+    }
+     
 
     void Update()
     {
