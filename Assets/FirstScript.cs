@@ -201,7 +201,7 @@ public class FirstScript : MonoBehaviour
         {
             Debug.Log(numder);
         }
-        */
+        
 
 
         //int numder1 = NumderAddFunction(1, 100);
@@ -213,6 +213,10 @@ public class FirstScript : MonoBehaviour
         {
             Debug.Log(number);
         }
+        */
+
+        PlayerModel player = new PlayerModel("muneta");
+        player.SayName();
 
 
     }
@@ -230,7 +234,7 @@ public class FirstScript : MonoBehaviour
         }
         return sum;
     }
-    */
+    
 
     List<int> ThreeNumber()
     {
@@ -251,10 +255,6 @@ public class FirstScript : MonoBehaviour
         {
             return true;
         }
-        if (number%10 == 3)
-        {
-            return true;
-        }
 
         while (number != 0)
         {
@@ -266,6 +266,7 @@ public class FirstScript : MonoBehaviour
         }
         return false;
     }
+    */
      
 
     void Update()
