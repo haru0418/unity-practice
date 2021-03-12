@@ -21,8 +21,8 @@ public class FirstScript : MonoBehaviour
 
         Debug.Log(x + y);
         Debug.Log(xString + yString);
-        */
-
+        
+        // ifの条件式
         int hp = 99;
 
         if (hp%3 == 1)
@@ -36,6 +36,25 @@ public class FirstScript : MonoBehaviour
         else
         {
             Debug.Log("あまりが０です");
+        }
+        */
+
+        //switch文
+
+        string characterType = "Player";
+
+        switch (characterType)
+        {
+            case "Player":
+            case "Friends":
+            Debug.Log("味方");
+            break;
+            case "Enemy":
+            Debug.Log("敵");
+            break;
+            default:
+            Debug.Log("その他");
+            break;
         }
     }
 
