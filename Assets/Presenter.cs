@@ -47,10 +47,9 @@ public class Presenter : MonoBehaviour
         /*
         PlayerModels player = new PlayerModels();
         string JsonPlayer = JsonUtility.ToJson(player);
-        Debug.Log(JsonPlayer);
         player = JsonUtility.FromJson<PlayerModels>(JsonPlayer);
         */
-        PlayerModel
+        
     }
 }
 /*
