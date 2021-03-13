@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Presenter : MonoBehaviour
 {
-    [SerializeField] GameObject image;
+    //[SerializeField] GameObject image;
+    //[SerializeField] TestScript testscript;
+    [SerializeField] Text textscropt;
     public void OnClockButton()
     {
 
@@ -16,7 +19,9 @@ public class Presenter : MonoBehaviour
         //image.SetActive(false);
 
         //obkectの破壊
-        Destroy(image);
+        //Destroy(image);
+        //testscript.TestScriptText();
+        textscropt.text = "haruyuki";
     }
 
     void Start()
