@@ -216,7 +216,10 @@ public class FirstScript : MonoBehaviour
         */
 
         PlayerModel player = new PlayerModel("muneta");
-        player.SayName();
+        PlayerModel player2 = new PlayerModel("mumumu");
+        Debug.Log(player.AT);
+        Debug.Log(player.HP);
+        Debug.Log(player.Name);
 
 
     }
