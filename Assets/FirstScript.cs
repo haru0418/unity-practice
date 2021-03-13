@@ -213,13 +213,14 @@ public class FirstScript : MonoBehaviour
         {
             Debug.Log(number);
         }
-        */
+        
 
         PlayerModel player = new PlayerModel("muneta");
         PlayerModel player2 = new PlayerModel("mumumu");
         Debug.Log(player.AT);
         Debug.Log(player.HP);
         Debug.Log(player.Name);
+        */
 
 
     }
