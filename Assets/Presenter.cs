@@ -44,12 +44,16 @@ public class Presenter : MonoBehaviour
         //string saveText = PlayerPrefs.GetString("DATA");
         //Debug.Log(saveText);
 
+        /*
         PlayerModels player = new PlayerModels();
         string JsonPlayer = JsonUtility.ToJson(player);
         Debug.Log(JsonPlayer);
+        player = JsonUtility.FromJson<PlayerModels>(JsonPlayer);
+        */
+        PlayerModel
     }
 }
-
+/*
 [Serializable]
 public class PlayerModels
 {
@@ -60,6 +64,6 @@ public class PlayerModels
     [SerializeField]
     int currentStage;
 }
-
+*/
     
 
