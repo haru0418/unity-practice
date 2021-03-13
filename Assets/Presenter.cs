@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +23,7 @@ public class Presenter : MonoBehaviour
         //testscript.TestScriptText();
         //textscropt.text = "haruyuki";
     }
+
     //[SerializeField] GameObject imagePrefab;
     //[SerializeField] Transform parent;
     void Start()
@@ -32,17 +33,33 @@ public class Presenter : MonoBehaviour
 
         //親要素の変更
         //image.transform.SetParent(parent);
+
+        //saveの仕方（文字列の場合）
         /*
         string xx = "saveデータ";
         PlayerPrefs.SetString("DATA", xx);
         PlayerPrefs.Save();
         */
 
-        string saveText = PlayerPrefs.GetString("DATA");
-        Debug.Log(saveText);
+        //string saveText = PlayerPrefs.GetString("DATA");
+        //Debug.Log(saveText);
 
-
+        PlayerModels player = new PlayerModels();
+        string JsonPlayer = JsonUtility.ToJson(player);
+        Debug.Log(JsonPlayer);
     }
+}
+
+[Serializable]
+public class PlayerModels
+{
+    [SerializeField]    
+    int hp;
+    [SerializeField]
+    int at;
+    [SerializeField]
+    int currentStage;
+}
 
     
-}
+
